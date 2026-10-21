@@ -55,7 +55,7 @@ function Index() {
   const submit = () => {
     if (editing === null || !title.trim()) return;
     const next = [...books];
-    next[editing] = { title: title.trim(), color };
+    next[editing] = { title: title.trim(), color: color ?? COLORS[0]! };
     save(next);
     setEditing(null);
   };
